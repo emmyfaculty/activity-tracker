@@ -26,7 +26,7 @@
                 </li>
 
                 <!--Assign tasks-->
-                <li th:class="${activeTab == 'assign-tasks'}? 'active nav-item mr-4' : 'nav-item mr-4'"
+                <li hidden th:class="${activeTab == 'assign-tasks'}? 'active nav-item mr-4' : 'nav-item mr-4'"
                     sec:authorize="hasRole('ROLE_ADMIN')">
                     <a class="nav-link" href="/assignment">Assign Tasks</a>
                 </li>
@@ -38,7 +38,7 @@
                 </li>
 
                 <!--Users List-->
-                <li th:class="${activeTab == 'users-list'}? 'active nav-item mr-4' : 'nav-item mr-4'"
+                <li hidden th:class="${activeTab == 'users-list'}? 'active nav-item mr-4' : 'nav-item mr-4'"
                     sec:authorize="isAuthenticated()">
                     <a class="nav-link" href="/users">Users List</a>
                 </li>
